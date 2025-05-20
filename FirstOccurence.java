@@ -1,33 +1,36 @@
-import java.util.*;
+package replace;
 
+import java.util.Scanner;
 
-public class FirstOccurence{
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the sentence");
-        String str = sc.nextLine();
+public class User_Interface {
 
-        if(!str.matches("[a-zA-Z ]+"){
-            System.out.println("Invalid sentence");
-            return;
-        }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String");
+		String sentence = sc.nextLine();
+		
+		if(!sentence.matches("[a-zA-Z ]+")) {
+			System.out.println("Invalid input");
+			return;
+		}
+		System.out.println("Enter the first word to be replaced");
+		String c = sc.nextLine();
+		if(!c.matches("[a-zA-Z]+")) {
+			System.out.println("Invalid character entered");
+			return;
+		}
+		System.out.println("Enter the word to be replaced");
+		String d= sc.nextLine();
+		
 
-        System.out.println("Enter the character to be searched");
-        String c = sc.nextLine();
+		if(sentence.contains(c)) {
+			sentence = sentence.replaceFirst(c, d);
+			System.out.println(sentence);
+		}else {
+			System.out.println("Character is not found");
+		}
 
-        System.out.println("Enter the character to be replaced");
-        String d = sc.nextLine();
+	}
 
-        if(!d.matches("[a-zA-Z]+")){
-            System.out.println("Inavlid character Input");
-            return;
-        }
-
-        if(str.contains(c)){
-            str = str.replaceFirst(c, d);
-            System.out.println(str);
-        }else{
-            System.out.println("Character is not found in the String");
-        }
-    }
 }
