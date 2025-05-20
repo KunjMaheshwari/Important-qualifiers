@@ -80,7 +80,7 @@ class RestaurantPartner extends ServicePartner{
         if(orderAmount > 500){
             finalCost = (orderAmount) + (orderAmount*tax) - (orderAmount*discount);
         }else{
-            finalCost += (orderAmount) + (orderAmount*tax);
+            finalCost = (orderAmount) + (orderAmount*tax);
         }
         return finalCost;
     }
