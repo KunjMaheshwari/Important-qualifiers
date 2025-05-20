@@ -15,14 +15,6 @@ class ServicePartner{
         this.orderAmount = orderAmount;
     }
 
-    public ServicePartner(String partnerId, String partnerName, String contactNumber){
-        this.partnerId = partnerId;
-        this.partnerName = partnerName;
-        this.contactNumber = contactNumber;
-    }
-
-
-
     public String getPartnerId(){
         return partnerId;
     }
@@ -60,12 +52,6 @@ class ServicePartner{
 class RestaurantPartner extends ServicePartner{
     private double discountPercentage;
     private double taxPercentage;
-
-    public RestaurantPartner(String partnerId, String partnerName, String contactNumber, double discountPercentage, double taxPercentage){
-        super(partnerId, partnerName, contactNumber);
-        this.discountPercentage = discountPercentage;
-        this.taxPercentage = taxPercentage;
-    }
 
     public RestaurantPartner(String partnerId, String partnerName, String contactNumber, double orderAmount, double discountPercentage, double taxPercentage){
         super(partnerId, partnerName, contactNumber, orderAmount);
