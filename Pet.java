@@ -45,11 +45,12 @@ public class Pet{
         System.out.println("Enter the breed to filter");
         String inputBreed = sc.nextLine();
 
-        System.out.println("Pets matching the criterion");
+
         
         TreeSet<String> result = pf.filterPetsByAgeAndBread(maxAge, inputBreed);
 
         if(!result.isEmpty()){
+            System.out.println("Pets matching the criterion");
             for(String s : result){
                 System.out.println(s);
             }
