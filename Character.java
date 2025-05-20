@@ -22,7 +22,7 @@ public class Character {
             return;
         }
 
-        String result = str.replaceFirst(String.valueOf(c), String.valueof(d));
+        String result = str.replaceFirst(String.valueOf(c), String.valueOf(d));
         sc.close();
     }
 }
