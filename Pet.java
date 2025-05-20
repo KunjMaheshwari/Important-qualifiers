@@ -1,3 +1,5 @@
+package pet;
+
 import java.util.*;
 
 class PetInfo{
@@ -24,7 +26,7 @@ class PetInfo{
     }
 }
 
-public class Pet{
+class Pet{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         PetInfo pf = new PetInfo();
@@ -45,12 +47,12 @@ public class Pet{
         System.out.println("Enter the breed to filter");
         String inputBreed = sc.nextLine();
 
-
+       
         
         TreeSet<String> result = pf.filterPetsByAgeAndBread(maxAge, inputBreed);
 
         if(!result.isEmpty()){
-            System.out.println("Pets matching the criterion");
+        	 System.out.println("Pets matching the criterion");
             for(String s : result){
                 System.out.println(s);
             }
