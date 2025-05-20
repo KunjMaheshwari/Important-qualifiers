@@ -22,16 +22,7 @@ public class Character {
             return;
         }
 
-        int index = str.indexOf(c);
-        if(index != -1){
-            char[] strArray = str.toCharArray();
-            strArray[index] = d;
-            str = new String(strArray);
-            System.out.println(str);
-        }else{
-            System.out.println("Character is not found in the string");
-        }
-
+        String result = str.replaceFirst(String.valueOf(c), String.valueof(d));
         sc.close();
     }
 }
