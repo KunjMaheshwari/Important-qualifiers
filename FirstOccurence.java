@@ -7,6 +7,11 @@ public class FirstOccurence{
         System.out.println("Enter the sentence");
         String str = sc.nextLine();
 
+        if(!str.matches("[a-zA-Z]+"){
+            System.out.println("Invalid sentence");
+            return;
+        }
+
         System.out.println("Enter the character to be searched");
         String c = sc.nextLine();
 
